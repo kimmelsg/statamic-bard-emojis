@@ -8,7 +8,7 @@ Statamic.$bard.buttons(buttons => {
     name: "color",
     text: "Emoji",
     command: "emoji",
-    args: { color: "yellow" },
+    args: { char: "" },
     icon: "paint-brush",
     component: EmojisMenu
   });

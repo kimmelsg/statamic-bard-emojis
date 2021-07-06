@@ -1024,16 +1024,16 @@ var Emoji = /*#__PURE__*/function () {
         inline: true,
         group: "inline",
         isBlock: false,
-        toDOM: function toDOM(_ref) {
-          var mark = _ref.mark;
-          return [mark.attrs["char"]];
+        toDOM: function toDOM(props) {
+          console.log(props, props.mark, props.mark.attrs);
+          return [props.mark.attrs["char"]];
         }
       };
     }
   }, {
     key: "commands",
-    value: function commands(_ref2) {
-      var type = _ref2.type;
+    value: function commands(_ref) {
+      var type = _ref.type;
       return function () {
         return function (state, dispatch) {
           var selection = state.selection;
@@ -1046,14 +1046,14 @@ var Emoji = /*#__PURE__*/function () {
     }
   }, {
     key: "pasteRules",
-    value: function pasteRules(_ref3) {
-      var type = _ref3.type;
+    value: function pasteRules(_ref2) {
+      var type = _ref2.type;
       return [];
     }
   }, {
     key: "inputRules",
-    value: function inputRules(_ref4) {
-      var type = _ref4.type;
+    value: function inputRules(_ref3) {
+      var type = _ref3.type;
       return [markInputRule(/(?:\*\*|__)([^*_]+)(?:\*\*|__)$/, type)];
     }
   }, {

@@ -1,6 +1,6 @@
 # Statamic Bard Emojis Extenions
 
-![alt text](https://github.com/kimmelsg/statamic-bard-emojis/blob/main/preview.png "Preview")
+![alt text](https://github.com/kimmelsg/statamic-bard-emojis/blob/master/preview.png "Preview")
 
 Add emojis to the bard content field.
 At the moment it's still under development. Please report any bugs that you have with it.

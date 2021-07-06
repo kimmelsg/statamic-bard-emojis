@@ -38,4 +38,8 @@ export default class Emoji {
   plugins() {
     return [EmojiPlugin];
   }
+
+  schema() {
+    return {};
+  }
 }

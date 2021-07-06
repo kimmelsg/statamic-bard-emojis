@@ -1,8 +1,7 @@
 const EmojiPlugin = function () {
   return function (scribe) {
     var command = new scribe.api.command("emoji");
-
-    scribe.commands.emoji = command;
+scribe.commands.emoji = command;
 
     command.execute = function (param) {
       console.log(param);
@@ -35,11 +34,23 @@ export default class Emoji {
     return "Emoji";
   }
 
-  plugins() {
-    return [EmojiPlugin];
-  }
-
   schema() {
     return {};
+  }
+
+  commands({ type, updateMark }) {
+    return (attrs) => updateMark(type, attrs);
+  }
+
+  pasteRules({ type }) {
+    return [];
+  }
+
+  inputRules({ type }) {
+    return [];
+  }
+
+  plugins() {
+    return [EmojiPlugin];
   }
 }

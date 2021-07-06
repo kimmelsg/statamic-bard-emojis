@@ -25,6 +25,7 @@ export default class Emoji {
 
   commands({ type }) {
     return () => (state, dispatch) => {
+      console.log(state);
       const { selection } = state;
       const position = selection.anchor;
 

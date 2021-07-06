@@ -15,3 +15,4 @@ At the moment it's still under development. Please report any bugs that you have
 ## New additions
 
 - Initial Version
+- Made Emojis in menu bigger

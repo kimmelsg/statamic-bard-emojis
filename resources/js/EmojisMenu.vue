@@ -17,7 +17,7 @@
                                 <div
                                         @click="setChar(emoji)"
                                         :key="index"
-                                        class="py-1 hover:bg-gray-200 justify-start cursor-pointer items-center my-1"
+                                        class="py-1 hover:bg-gray-200 justify-start cursor-pointer items-center my-1 text-xl"
                                 >
                                         <p class="text-center">
                                                 {{ emoji }}

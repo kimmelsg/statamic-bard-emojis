@@ -1042,10 +1042,13 @@ var Emoji = /*#__PURE__*/function () {
       return function () {
         return function (state, dispatch) {
           console.log('stuff', type, state);
-          var selection = state.selection;
-          var position = selection.anchor;
-          var node = type.create();
-          dispatch(state.tr.insert(position, node));
+          var selection = state.selection,
+              tr = state.tr;
+          var from = selection.from,
+              to = selection.to;
+          tr.insertText(type.attrs["char"], from);
+          tr.insertText(type.attrs["char"], to + 1);
+          dispatch(tr);
           return true;
         };
       };

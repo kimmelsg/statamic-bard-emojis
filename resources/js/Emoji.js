@@ -25,11 +25,14 @@ export default class Emoji {
   commands({ type }) {
     return () => (state, dispatch) => {
       console.log('stuff', type, state);
-      const { selection } = state;
-      const position = selection.anchor;
 
-      const node = type.create();
-      dispatch(state.tr.insert(position, node));
+      const { selection, tr } = state;
+      const { from, to } = selection;
+
+      tr.insertText(type.attrs.char, from);
+      tr.insertText(type.attrs.char, to + 1);
+
+      dispatch(tr);
 
       return true;
     };

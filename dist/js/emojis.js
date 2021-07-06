@@ -1031,8 +1031,7 @@ var Emoji = /*#__PURE__*/function () {
         group: "inline",
         isBlock: false,
         toDOM: function toDOM(mark) {
-          console.log(mark, mark.attrs, mark.attrs["char"]);
-          return [mark.attrs["char"]];
+          return mark.attrs["char"];
         }
       };
     }

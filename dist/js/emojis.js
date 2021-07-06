@@ -1041,7 +1041,7 @@ var Emoji = /*#__PURE__*/function () {
       var type = _ref.type;
       return function () {
         return function (state, dispatch) {
-          console.log(state);
+          console.log('stuff', type, state);
           var selection = state.selection;
           var position = selection.anchor;
           var node = type.create();

@@ -23,14 +23,13 @@ export default class Emoji {
   }
 
   commands({ type }) {
-    return () => (state, dispatch) => {
-      console.log('stuff', type, state, type.attrs.char);
+    return (attrs) => (state, dispatch) => {
+      console.log('stuff', type, state, attrs.char);
 
       const { selection, tr } = state;
       const { from, to } = selection;
 
-      tr.insertText(type.attrs.char, from);
-      tr.insertText(type.attrs.char, to + 1);
+      tr.insertText(attrs.char, from, to);
 
       dispatch(tr);
 

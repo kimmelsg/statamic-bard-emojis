@@ -1039,15 +1039,14 @@ var Emoji = /*#__PURE__*/function () {
     key: "commands",
     value: function commands(_ref) {
       var type = _ref.type;
-      return function () {
+      return function (attrs) {
         return function (state, dispatch) {
-          console.log('stuff', type, state, type.attrs["char"]);
+          console.log('stuff', type, state, attrs["char"]);
           var selection = state.selection,
               tr = state.tr;
           var from = selection.from,
               to = selection.to;
-          tr.insertText(type.attrs["char"], from);
-          tr.insertText(type.attrs["char"], to + 1);
+          tr.insertText(attrs["char"], from, to);
           dispatch(tr);
           return true;
         };

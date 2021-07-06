@@ -10,14 +10,14 @@
                         @click="showEmojiMenu = !showEmojiMenu"
                 />
                 <div
-                        class="absolute left-10 bg-white px-1 rounded-lg flex flex-wrap min-w-250 lg:min-w-500 z-10 max-h-300px overflow-y-scroll border-2 border-gray-5000"
+                        class="absolute left-10 bg-white px-1 rounded-lg grid grid-cols-10 min-w-250 lg:min-w-500 z-10 max-h-300px overflow-y-scroll border-2 border-gray-5000"
                         :class="{ hidden: !showEmojiMenu }"
                 >
                         <template v-for="(emoji, index) in emojis">
                                 <div
                                         @click="setChar(emoji)"
                                         :key="index"
-                                        class="py-1 hover:bg-gray-300 w-full sm:w-1/2 xl:w-1/4 flex flex-row justify-start cursor-pointer items-center my-1"
+                                        class="py-1 hover:bg-gray-300 justify-start cursor-pointer items-center my-1"
                                 >
                                         <p class="text-center">
                                                 {{ emoji }}

@@ -1,7 +1,7 @@
 import EmojisMenu from "./EmojisMenu";
 import Emoji from "./Emoji";
 
-Statamic.$bard.extend(() => new Emoji());
+Statamic.$bard.extend(({ node }) => node(new Emoji()));
 
 Statamic.$bard.buttons(buttons => {
   const indexOfBold = _.findIndex(buttons, { command: "bold" });

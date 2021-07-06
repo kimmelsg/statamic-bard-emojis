@@ -1170,8 +1170,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Emoji__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Emoji */ "./resources/js/Emoji.js");
 
 
-Statamic.$bard.extend(function () {
-  return new _Emoji__WEBPACK_IMPORTED_MODULE_1__["default"]();
+Statamic.$bard.extend(function (_ref) {
+  var node = _ref.node;
+  return node(new _Emoji__WEBPACK_IMPORTED_MODULE_1__["default"]());
 });
 Statamic.$bard.buttons(function (buttons) {
   var indexOfBold = _.findIndex(buttons, {

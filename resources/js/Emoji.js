@@ -8,11 +8,16 @@ export default class Emoji {
 
   schema() {
     return {
+      attrs: {
+        char: {
+          default: ""
+        }
+      },
       inline: true,
       group: "inline",
       isBlock: false,
-      toDOM: (props) => {
-        console.log(props, props.mark, props.mark.attrs);
+      toDOM: (mark) => {
+        console.log(mark, mark.attrs, mark.attrs.char);
         return [props.mark.attrs.char];
       }
     };

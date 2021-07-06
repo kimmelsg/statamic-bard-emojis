@@ -1021,11 +1021,16 @@ var Emoji = /*#__PURE__*/function () {
     key: "schema",
     value: function schema() {
       return {
+        attrs: {
+          "char": {
+            "default": ""
+          }
+        },
         inline: true,
         group: "inline",
         isBlock: false,
-        toDOM: function toDOM(props) {
-          console.log(props, props.mark, props.mark.attrs);
+        toDOM: function toDOM(mark) {
+          console.log(mark, mark.attrs, mark.attrs["char"]);
           return [props.mark.attrs["char"]];
         }
       };

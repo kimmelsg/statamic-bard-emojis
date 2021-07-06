@@ -24,8 +24,6 @@ export default class Emoji {
 
   commands({ type }) {
     return (attrs) => (state, dispatch) => {
-      console.log('stuff', type, state, attrs.char);
-
       const { selection, tr } = state;
       const { from, to } = selection;
 

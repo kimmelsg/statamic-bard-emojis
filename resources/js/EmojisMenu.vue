@@ -41,7 +41,8 @@ export default {
         },
         methods: {
                 setChar(char) {
-                        this.editor.commands.emoji({ char });
+                        console.log("char", char);
+                        this.editor.commands.emoji({ char: char });
                         this.showEmojiMenu = false;
                 }
         },

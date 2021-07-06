@@ -137,6 +137,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     setChar: function setChar(_char) {
+      console.log("char", _char);
       this.editor.commands.emoji({
         "char": _char
       });
@@ -1031,7 +1032,7 @@ var Emoji = /*#__PURE__*/function () {
         isBlock: false,
         toDOM: function toDOM(mark) {
           console.log(mark, mark.attrs, mark.attrs["char"]);
-          return [props.mark.attrs["char"]];
+          return [mark.attrs["char"]];
         }
       };
     }

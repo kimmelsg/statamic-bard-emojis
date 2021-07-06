@@ -1,4 +1,4 @@
-import EmojiMenu from "./EmojiMenu";
+import EmojisMenu from "./EmojisMenu";
 
 Statamic.$bard.buttons(buttons => {
   const indexOfBold = _.findIndex(buttons, { command: "bold" });
@@ -8,6 +8,6 @@ Statamic.$bard.buttons(buttons => {
     command: "emoji",
     args: { color: "yellow" },
     icon: "paint-brush",
-    component: EmojiMenu
+    component: EmojisMenu
   });
 });

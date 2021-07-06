@@ -1041,7 +1041,7 @@ var Emoji = /*#__PURE__*/function () {
       var type = _ref.type;
       return function () {
         return function (state, dispatch) {
-          console.log('stuff', type, state);
+          console.log('stuff', type, state, type.attrs["char"]);
           var selection = state.selection,
               tr = state.tr;
           var from = selection.from,

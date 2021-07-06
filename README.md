@@ -1,18 +1,16 @@
-# Statamic Bard Text Color Extension
+# Statamic Bard Emojis Extenions
 
-![alt text](https://github.com/xndbogdan/statamic-bard-text-color/blob/main/preview_v1.2.png "Preview")
+![alt text](https://github.com/kimmelsg/statamic-bard-emojis/blob/main/preview.png "Preview")
 
-A statamic bard plugin that lets you change text color!
-It allows you to use the default tailwind colors.
+Add emojis to the bard content field.
 At the moment it's still under development. Please report any bugs that you have with it.
 
 ## Installation guide
 
-- composer require xndbogdan/statamic-bard-text-color
+- composer require kimmelsg/statamic-bard-emojis
 
 ![Statamic 3.0+](https://img.shields.io/badge/Statamic-3.0+-FF269E?style=for-the-badge&link=https://statamic.com)
 [![Total Downloads](https://img.shields.io/packagist/dt/xndbogdan/statamic-bard-text-color.svg)](https://packagist.org/packages/xndbogdan/statamic-bard-text-color)
 
 ## New additions
 
-- color menu is now scrollable, instead of filling the whole screen

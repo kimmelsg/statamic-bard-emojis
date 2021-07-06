@@ -1,0 +1,29 @@
+{
+  "require": {
+    "php": "^7.4 | ^8.0",
+    "statamic/cms": "^3.0.14"
+  },
+  "name": "kimmelsg/statamic-bard-emojis",
+  "keywords": ["statamic", "bard", "emojis", "emoticons"],
+  "description": "Statamic Bard Emojis",
+  "autoload": {
+    "psr-4": {
+      "Kimmelsg\\BardEmojis\\": "src"
+    }
+  },
+  "type": "statamic-addon",
+  "extra": {
+    "statamic": {
+      "name": "Statamic Bard Emojis",
+      "description": "Add emoji suport for Bard."
+    },
+    "laravel": {
+      "providers": ["Kimmelsg\\BardEmojis\\ServiceProvider"]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

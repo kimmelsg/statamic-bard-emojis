@@ -11,7 +11,7 @@ export default class Emoji {
       inline: true,
       group: "inline",
       isBlock: false,
-      toDOM: () => {
+      toDOM: ({ mark }) => {
         return [mark.attrs.char];
       }
     };

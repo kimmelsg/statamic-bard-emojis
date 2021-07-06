@@ -1024,15 +1024,16 @@ var Emoji = /*#__PURE__*/function () {
         inline: true,
         group: "inline",
         isBlock: false,
-        toDOM: function toDOM() {
+        toDOM: function toDOM(_ref) {
+          var mark = _ref.mark;
           return [mark.attrs["char"]];
         }
       };
     }
   }, {
     key: "commands",
-    value: function commands(_ref) {
-      var type = _ref.type;
+    value: function commands(_ref2) {
+      var type = _ref2.type;
       return function () {
         return function (state, dispatch) {
           var selection = state.selection;
@@ -1045,14 +1046,14 @@ var Emoji = /*#__PURE__*/function () {
     }
   }, {
     key: "pasteRules",
-    value: function pasteRules(_ref2) {
-      var type = _ref2.type;
+    value: function pasteRules(_ref3) {
+      var type = _ref3.type;
       return [];
     }
   }, {
     key: "inputRules",
-    value: function inputRules(_ref3) {
-      var type = _ref3.type;
+    value: function inputRules(_ref4) {
+      var type = _ref4.type;
       return [markInputRule(/(?:\*\*|__)([^*_]+)(?:\*\*|__)$/, type)];
     }
   }, {
@@ -1169,9 +1170,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Emoji__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Emoji */ "./resources/js/Emoji.js");
 
 
-Statamic.$bard.extend(function (_ref) {
-  var node = _ref.node;
-  return node(new _Emoji__WEBPACK_IMPORTED_MODULE_1__["default"]());
+Statamic.$bard.extend(function () {
+  return new _Emoji__WEBPACK_IMPORTED_MODULE_1__["default"]();
 });
 Statamic.$bard.buttons(function (buttons) {
   var indexOfBold = _.findIndex(buttons, {
@@ -1185,7 +1185,7 @@ Statamic.$bard.buttons(function (buttons) {
     args: {
       "char": ""
     },
-    icon: "paint-brush",
+    html: "😀",
     component: _EmojisMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
   });
 });

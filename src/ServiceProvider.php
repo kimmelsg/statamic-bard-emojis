@@ -1,6 +1,6 @@
 <?php
 
-namespace Kimmelsg\BardHighlightColor;
+namespace Kimmelsg\BardEmojis;
 
 use Statamic\Providers\AddonServiceProvider;
 

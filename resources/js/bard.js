@@ -45,6 +45,5 @@ const EmojiPlugin = function () {
 };
 
 Statamic.booting(() => {
-    Statamic.$components.register('example-fieldtype', ExampleFieldtype);
     Statamic.$bard.plugins.push(EmojiPlugin);
 });
